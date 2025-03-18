@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('biblioteca_libro', function (Blueprint $table) {
@@ -15,8 +18,11 @@ return new class extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('biblioteca_libro');
+        Schema::dropIfExists('biblioteca_libros');
     }
 };
