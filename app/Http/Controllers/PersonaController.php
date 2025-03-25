@@ -13,7 +13,7 @@ class PersonaController extends Controller
 {
     public function index()
     {
-        $personas = Persona::paginate(10);
+        $personas = Persona::all();
         return view('personas.index', compact('personas'));
     }
 
